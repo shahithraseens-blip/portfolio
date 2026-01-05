@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Shahith Raseen S</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#internship">Internship</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Shahith Raseen S</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#internship" onclick="toggleMenu()">Internship</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#project" onclick="toggleMenu()">Project</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+
+            </div>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="profile.png" alt="shahith raseen profile picture" />
+
+
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello I'm</p>
+            <h1 class="title">Shahith Raseen S</h1>
+            <p class="section__text__p2">Frontend Developer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2">
+                    <a href="Resume.pdf" download="Resume" target="_blank">Download CV</a>
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">contact info</button>
+            </div>
+            <div id="socials-container">
+                <img src="linkdin.png" alt="My LinkdIn profile" class="icon" 
+                
+                    onclick="location.href='https://www.linkedin.com/in/shahith-raseen'">
+                <img src="github.png" alt="My Github profile" class="icon"
+                    onclick="location.href='https://github.com/'" />
+            </div>
+
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic__container">
+                <img src="me.jpg" alt="Profile Picture" class="about-pic">
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="education.png" alt="education icon" class="icon">
+
+                        <h3>Education</h3>
+                        <p>B.Sc. Bachelors Degree <br>Information Technology</p>
+
+
+
+
+                    </div>
+                    <div class="details-container">
+                        <img src="experience.png" alt="experience icon" class="icon">
+
+                        <h3>Experience</h3>
+                        <p>Fodavin Technologies <br>Frontend Development</p>
+
+
+
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>
+                        From Textbooks to Tech Stacks "My journey started in the classrooms of my B.Sc. degree, where I
+                        first learned the logic behind code. But I didn't want to just pass exams; I wanted to build
+                        things.
+
+                        While my degree gave me a strong foundation in computer science principles, I spent my evenings
+                        teaching myself the modern web stack—HTML5, CSS3, and JavaScript. I actively participated in
+                        college workshops and technical seminars, which fueled my passion for frontend development. This
+                        drive led me to secure an internship at Fodavin Technologies even before graduating, allowing me
+                        to turn my academic knowledge into real-world applications."
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="internship">
+        <p class="section__text__p1">Where I've Worked</p>
+        <h1 class="title">Internship</h1>
+        <div class="experience-list-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Fodavin Technologies</h2>
+                    <p class="experience-role">Frontend Developer — Internship</p>
+                    <p class="experience-duration">Sep 2025 — Dec 2025</p>
+                    <p>worked on the e-learning platforms frontend, creating features
+                        tested by over 50 pilot users, which shows my focus on quality
+                        delivery.Used troubleshooting skills to fix and improve existing JavaScript
+                        code, achieving a 15% boost in how fast the app loaded, showing
+                        continuous improvement. Learned the team's project process by making an average of 3-4
+                        commits daily and managing code using Git/GitHub. </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="skills">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Skills</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-containers">
+                    <h2 class="experience-sub-title">Web Developer</h2>
+                    <div class="article-container">
+
+                        <article>
+                            <img src="html.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>HTML</h3>
+
+                            </div>
+                        </article>
+                        <article>
+                            <img src="css.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>CSS</h3>
+
+                            </div>
+                        </article>
+                        <article>
+                            <img src="js.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>JavaScript</h3>
+
+                            </div>
+                        </article>
+                        <article>
+                            <img src="git.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>Git</h3>
+
+                            </div>
+                        </article>
+                        <article>
+                            <img src="github.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>GitHub</h3>
+
+                            </div>
+                        </article>
+                        <article>
+                            <img src="php.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>PHP/MySQL</h3>
+
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+    </section>
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="project.png" alt="Project 1" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Project One</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/'">Github</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live
+                            Demo
+                        </button>
+
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <section id="contact">
+        <p class="section__text__p1">Get In Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="email.jpg" alt="Email icon" class="icon contact-icon">
+                <p><a href="mailto:shahithraseen.s@gmail.com">shahithraseen.s@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="linkdin.png" alt="LinkdIn icon" class="icon contact-icon">
+                <p><a href="https://www.linkedin.com/in/shahith-raseen">LinkdIn</a></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#internship">Internship</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+            </div>
+        </nav>
+        <p>Copyright &#169; 2025 Shahith Raseen. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
