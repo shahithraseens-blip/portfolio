@@ -23,6 +23,209 @@ a, .btn{
     transition: all 300ms ease;
 }
 
+/* ANIMATIONS */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes profileGlow {
+    0% {
+        transform: translateY(0px) scale(1);
+        filter: brightness(1) drop-shadow(0 10px 20px rgba(53, 53, 53, 0.2));
+    }
+    25% {
+        transform: translateY(-20px) scale(1.02);
+        filter: brightness(1.1) drop-shadow(0 15px 30px rgba(53, 53, 53, 0.4));
+    }
+    50% {
+        transform: translateY(-10px) scale(1);
+        filter: brightness(1) drop-shadow(0 10px 25px rgba(53, 53, 53, 0.3));
+    }
+    75% {
+        transform: translateY(-20px) scale(1.02);
+        filter: brightness(1.1) drop-shadow(0 15px 30px rgba(53, 53, 53, 0.4));
+    }
+    100% {
+        transform: translateY(0px) scale(1);
+        filter: brightness(1) drop-shadow(0 10px 20px rgba(53, 53, 53, 0.2));
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 2px 8px rgba(53,53,53,0.1);
+    }
+    50% {
+        box-shadow: 0 4px 16px rgba(53,53,53,0.3);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes underlineExpand {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes flipIn {
+    from {
+        opacity: 0;
+        transform: rotateY(-90deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateY(0);
+    }
+}
+
+@keyframes rippleAnimation {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
 /* desktop nav*/
 
  nav,
@@ -34,6 +237,7 @@ a, .btn{
     justify-content: space-around;
     align-items: center;
     height: 17vh;
+    animation: slideInFromLeft 0.8s ease;
  }
 
  .nav-links{
@@ -53,10 +257,12 @@ a, .btn{
     text-decoration: underline;
     text-underline-offset: 1rem;
     text-decoration-color: rgb(181,181,181);
+    animation: wave 0.5s ease-in-out;
  }
 
  .logo{
     font-size: 2rem;
+    animation: fadeInDown 0.8s ease;
  }
 
  .logo:hover{
@@ -111,6 +317,11 @@ a, .btn{
     transition: all 0.3 ease-in-out;
  }
 
+ .menu-links a:hover {
+    background: rgba(53, 53, 53, 0.1);
+    transform: translateX(-5px);
+ }
+
  .menu-links li{
     list-style: none;
  }
@@ -157,6 +368,7 @@ section{
 
 .section__pic-container img {
     border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .section-container{
@@ -183,6 +395,7 @@ section{
 .section__text{
    align-self: center;
    text-align: center;
+   animation: fadeInUp 1s ease;
 }
 
 
@@ -202,13 +415,33 @@ section{
 .title{
    font-size: 3rem;
    text-align: center;
+   animation: fadeInDown 0.8s ease;
 }
 
 #socials-container{
    display: flex;
    justify-content: center;
-   margin-top: 1rem;
+   margin-top: 2rem;
    gap: 1rem;
+}
+
+#socials-container img {
+    animation: bounce 2s ease-in-out infinite;
+    transition: all 300ms ease;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+#socials-container img:hover {
+    animation: bounce 0.6s ease-in-out, spin 0.8s ease-in-out;
+}
+
+.contact-icon{
+   cursor: default;
+   height: 2rem;
+   transition: all 300ms ease;
+   animation: bounce 2s ease-in-out infinite;
 }
 
 
@@ -218,6 +451,11 @@ section{
 .icon{
    cursor: pointer;
    height: 1rem;
+   transition: all 300ms ease;
+}
+
+.icon:hover {
+    animation: spin 0.8s ease-in-out;
 }
 
 /*buttons*/
@@ -226,6 +464,14 @@ section{
    display: flex;
    justify-content: center;
    gap: 1rem;
+}
+
+.btn-container .btn:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.btn-container .btn:nth-child(2) {
+    animation-delay: 0.4s;
 }
 
 .btn{
@@ -239,33 +485,37 @@ section{
    font-size: 1rem;
    text-align: center;
    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+   position: relative;
+   overflow: hidden;
 }
 
 .btn-color-1{
    background: rgb(53,53,53);
    color: white;
    border: 1px solid rgb(53,53,53);
+   animation: scaleIn 0.6s ease;
 }
 
 .btn-color-1:hover{
    background: rgb(0,0,0);
    border-color: rgb(0,0,0);
-   transform: translateY(-2px);
-   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+   transform: translateY(-4px) scale(1.05);
+   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 .btn-color-2{
    background: none;
    color: rgb(53,53,53);
    border: 1px solid rgb(53,53,53);
+   animation: scaleIn 0.7s ease;
 }
 
 .btn-color-2:hover{
    background: rgb(53,53,53);
    color: white;
    border-color: rgb(53,53,53);
-   transform: translateY(-2px);
-   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+   transform: translateY(-4px) scale(1.05);
+   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 .btn-container{
@@ -284,6 +534,7 @@ section{
    display: flex;
    align-items: center;
    justify-content: center;
+   animation: slideUp 0.8s ease;
 }
 
 .about-containers{
@@ -321,6 +572,8 @@ section{
    border-radius: 2rem;
    width: 300px;
    height: 300px;
+   animation: fadeInLeft 1s ease;
+   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 /* arrow image removed */
@@ -333,6 +586,13 @@ section{
    border: rgb(53,53,53) 0.1rem solid;
    border-color: rgb(163,163,163);
    text-align: center;
+   animation: fadeInUp 1s ease;
+   transition: all 300ms ease;
+}
+
+.details-containers:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 .section-container {
@@ -398,13 +658,14 @@ section{
    border-radius: 0.5rem;
    font-weight: 600;
    transition: all 300ms ease;
+   animation: scaleIn 0.8s ease;
 }
 
 .certificate-link:hover{
    background: rgb(0,0,0);
    text-decoration: none;
-   transform: translateY(-2px);
-   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+   transform: translateY(-4px) scale(1.05);
+   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 
@@ -423,6 +684,16 @@ article{
    width: 10rem;
    justify-content: space-around;
    gap: 0.5rem;
+   animation: fadeInUp 1s ease;
+   transition: all 300ms ease;
+}
+
+article:hover {
+    transform: scale(1.1);
+}
+
+article:hover img {
+    animation: spin 0.8s ease-in-out;
 }
 
 /* Skills-specific layout and icon sizing */
@@ -457,6 +728,7 @@ article.icon{
    display: flex;
    align-items: center;
    justify-content: center;
+   animation: slideUp 0.8s ease;
 }
 
 .color-container{
@@ -475,6 +747,13 @@ article.icon{
    height: auto;
    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
    object-fit: cover;
+   animation: fadeInUp 1s ease;
+   transition: all 300ms ease;
+}
+
+.project-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
 
@@ -493,8 +772,8 @@ article.icon{
    background: rgb(53,53,53);
    color: white;
    border-color: rgb(53,53,53);
-   transform: translateY(-2px);
-   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+   transform: translateY(-4px) scale(1.05);
+   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 /*CONTACT*/
@@ -515,6 +794,12 @@ article.icon{
    background: rgb(250,250,250);
    margin: 2rem auto;
    padding: 0.5rem;
+   animation: fadeInUp 1s ease;
+   transition: all 300ms ease;
+}
+
+.contact-info-upper-container:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 .contact-info-container{
@@ -532,8 +817,8 @@ article.icon{
 
 .contact-icon{
    cursor: default;
-   height: 2rem;
-   
+   height: 1rem;
+   transition: all 300ms ease;
 }
 
 /* Footer */
@@ -545,6 +830,7 @@ footer{
 
 footer p{
    text-align: center;
+   animation: slideUp 1s ease;
 }
 
 
