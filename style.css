@@ -549,7 +549,7 @@ section{
 #skills .about-containers{
    justify-content: center;
 }
-
+ 
 #skills .details-containers{
    flex: 0 1 60%;
    max-width: 700px;
